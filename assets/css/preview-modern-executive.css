@@ -1,0 +1,923 @@
+/* =========================================================
+   TEMPLATE 2 — MODERN EXECUTIVE
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+:root {
+    --navy: #172033;
+    --navy-light: #253653;
+    --blue: #2563eb;
+
+    --text: #202735;
+    --muted: #667085;
+    --light-text: #8a94a6;
+
+    --line: #dfe4eb;
+    --soft: #f5f7fa;
+
+    --page: #ffffff;
+    --background: #edf1f5;
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
+    padding: 45px 20px 70px;
+}
+
+
+/* =========================================================
+   RESUME PAGE
+   ========================================================= */
+
+.resume {
+    width: min(900px, 100%);
+    min-height: 1100px;
+
+    margin: 0 auto;
+
+    background: var(--page);
+
+    box-shadow:
+        0 18px 50px rgba(15, 23, 42, 0.12);
+
+    border-radius: 6px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.resume-header {
+    position: relative;
+
+    padding: 42px 52px 34px;
+
+    background: var(--navy);
+
+    color: white;
+}
+
+
+/* small top accent */
+
+/* .resume-header::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: var(--blue);
+} */
+
+
+/* =========================================================
+   NAME
+   ========================================================= */
+
+.header-main h1 {
+    margin: 0;
+
+    font-size: 38px;
+    line-height: 1.08;
+
+    font-weight: 800;
+
+    letter-spacing: -1.4px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   PROFESSIONAL TITLE
+   ========================================================= */
+
+.resume-role {
+    margin: 8px 0 0;
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =========================================================
+   CONTACT INFORMATION
+   ========================================================= */
+
+.contact-info {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px 20px;
+
+    margin-top: 22px;
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.contact-info a,
+.contact-info span {
+    color: #dbe4ef;
+
+    font-size: 11.5px;
+
+    text-decoration: none;
+
+    line-height: 1.5;
+}
+
+.contact-info a:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.resume-content {
+    position: relative;
+
+    padding: 40px 52px 55px 70px;
+}
+
+
+/*
+    Vertical design rail.
+*/
+
+.resume-content::before {
+    content: "";
+
+    position: absolute;
+
+    top: 40px;
+    bottom: 55px;
+
+    left: 43px;
+
+    width: 2px;
+
+    background: #e8ecf2;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.resume-section {
+    position: relative;
+
+    margin: 0 0 32px;
+}
+
+.resume-section:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   SECTION ACCENT MARK
+   ========================================================= */
+
+.resume-section::before {
+    content: "";
+
+    position: absolute;
+
+    left: -31px;
+    top: 4px;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--blue);
+
+    box-shadow:
+        0 0 0 4px #ffffff,
+        0 0 0 5px #dbe4f2;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+   ========================================================= */
+
+.resume-section > h2 {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin: 0 0 18px;
+
+    color: var(--navy);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: 1.6px;
+
+    text-transform: uppercase;
+}
+
+
+/*
+    Section line
+*/
+
+.resume-section > h2::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: var(--line);
+}
+
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.summary {
+    margin: 0;
+
+    max-width: 780px;
+
+    color: #4b5565;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   RESUME ITEMS
+   ========================================================= */
+
+.resume-item {
+    margin-bottom: 23px;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.resume-item:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   ITEM HEADER
+   ========================================================= */
+
+.item-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   ITEM TITLE
+   ========================================================= */
+
+.item-header h3 {
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    letter-spacing: -0.15px;
+}
+
+
+/* =========================================================
+   ORGANIZATION
+   ========================================================= */
+
+.organization {
+    margin: 3px 0 0;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   DATE
+   ========================================================= */
+
+.date {
+    flex-shrink: 0;
+
+    color: var(--navy-light);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    white-space: nowrap;
+
+    padding: 4px 9px;
+
+    background: var(--soft);
+
+    border: 1px solid #e4e8ee;
+
+    border-radius: 4px;
+}
+
+
+/* =========================================================
+   GRADE
+   ========================================================= */
+
+.grade {
+    margin: 4px 0 0;
+
+    color: var(--muted);
+
+    font-size: 11.5px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   GENERAL ITEM TEXT
+   ========================================================= */
+
+.resume-item > p {
+    margin: 7px 0 0;
+
+    color: #4d5767;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+
+.tech-stack {
+    margin-top: 6px !important;
+
+    color: var(--blue) !important;
+
+    font-size: 11.5px !important;
+
+    font-weight: 600 !important;
+}
+
+
+/* =========================================================
+   PROJECT LINK
+   ========================================================= */
+
+.project-link {
+    margin-left: auto;
+
+    flex-shrink: 0;
+
+    color: var(--blue);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   PROJECT ROLE
+   ========================================================= */
+
+.role {
+    color: #505a69 !important;
+}
+
+.role strong {
+    color: var(--text);
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   ACHIEVEMENTS
+   ========================================================= */
+
+.achievements-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.achievements-list li {
+    position: relative;
+
+    margin-bottom: 8px;
+    padding-left: 18px;
+
+    color: #4d5767;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+.achievements-list li::before {
+    content: "";
+
+    position: absolute;
+
+    left: 1px;
+    top: 8px;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--blue);
+}
+
+
+/* =========================================================
+   LANGUAGES
+   ========================================================= */
+
+.language-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 6px;
+}
+
+.language-name {
+    min-width: 75px;
+
+    color: var(--text);
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.language-level {
+    color: var(--muted);
+
+    font-size: 11.5px;
+}
+
+
+/* =========================================================
+   CERTIFICATIONS
+   ========================================================= */
+
+.certification-item .item-header h3 {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CUSTOM SECTIONS
+   ========================================================= */
+
+.custom-section-item {
+    color: #4d5767;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+    color: inherit;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 15px 8px 35px;
+    }
+
+    .resume {
+        min-height: auto;
+
+        border-radius: 4px;
+    }
+
+    .resume-header {
+        padding: 34px 28px 28px;
+    }
+
+    .header-main h1 {
+        font-size: 30px;
+
+        letter-spacing: -1px;
+    }
+
+    .resume-role {
+        font-size: 13px;
+    }
+
+    .contact-info {
+        gap: 7px 14px;
+
+        margin-top: 18px;
+        padding-top: 15px;
+    }
+
+    .contact-info a,
+    .contact-info span {
+        font-size: 10.5px;
+    }
+
+    .resume-content {
+        padding: 32px 28px 40px 48px;
+    }
+
+    .resume-content::before {
+        left: 28px;
+
+        top: 32px;
+        bottom: 40px;
+    }
+
+    .resume-section::before {
+        left: -24px;
+    }
+
+    .resume-section {
+        margin-bottom: 28px;
+    }
+
+    .item-header {
+        gap: 8px;
+    }
+
+    .date {
+        font-size: 10px;
+
+        padding: 3px 7px;
+    }
+
+    .item-header h3 {
+        font-size: 13px;
+    }
+
+    .organization,
+    .resume-item > p {
+        font-size: 11.5px;
+    }
+}
+
+/* =========================================================
+   PREVIEW CONTROLS
+   ========================================================= */
+
+button#printBtn {
+    display: block;
+
+    margin: 22px auto 0;
+
+    padding: 10px 24px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+button#printBtn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.back {
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
+
+    margin-top: 14px;
+}
+
+.back .inner {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 36px;
+
+    background: #222222;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.back .inner:hover {
+    background: #111111;
+
+    transform: translateY(-1px);
+}
+
+.back .inner a {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.back img {
+    display: block;
+
+    width: 30px !important;
+    height: 30px !important;
+
+    max-width: 30px !important;
+    max-height: 30px !important;
+
+    object-fit: contain;
+}
+/* =========================================================
+   PRINT / SAVE AS PDF
+   ========================================================= */
+
+@page {
+    size: A4;
+    margin: 12mm 14mm;
+}
+
+@media print {
+
+    html,
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+
+        width: 100% !important;
+
+        min-height: 0 !important;
+
+        background: #ffffff !important;
+    }
+
+    body {
+        font-size: 10.5pt;
+    }
+
+    .resume {
+        width: 100% !important;
+        max-width: none !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: #ffffff !important;
+
+        border: none !important;
+        border-radius: 0 !important;
+
+        box-shadow: none !important;
+
+        overflow: visible !important;
+    }
+
+    .resume-header {
+        break-inside: avoid;
+        page-break-inside: avoid;
+
+        margin-bottom: 0;
+
+        box-shadow: none !important;
+    }
+
+    .resume-content {
+        width: 100% !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+
+        padding: 30px 0 0 18px !important;
+
+        overflow: visible !important;
+    }
+
+    .resume-content::before {
+        top: 30px;
+        bottom: 0;
+
+        left: 5px;
+    }
+
+    .resume-section {
+        height: auto !important;
+        min-height: 0 !important;
+
+        margin-bottom: 26px;
+
+        overflow: visible !important;
+
+        break-inside: auto;
+        page-break-inside: auto;
+    }
+
+    .resume-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+
+        margin-bottom: 18px;
+    }
+
+    .resume-section > h2 {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    .item-header {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    /*
+       Keep print colors visible.
+    */
+
+    .resume-header {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .date {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .resume-section::before {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .achievements-list li::before {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /*
+       Remove browser UI.
+    */
+
+    button,
+    #printBtn,
+    .print-btn,
+    .back,
+    .back-btn {
+        display: none !important;
+    }
+
+    /*
+       Keep links visible.
+    */
+
+    a {
+        color: inherit !important;
+        text-decoration: none !important;
+    }
+
+    /*
+       Prevent screen layout restrictions
+       from affecting PDF pagination.
+    */
+
+    *,
+    .resume,
+    .resume-content,
+    .resume-section {
+        max-height: none !important;
+        overflow: visible !important;
+    }
+}

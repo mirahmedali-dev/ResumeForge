@@ -1,0 +1,1137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>ResumeForge — Resume Builder</title>
+
+    <link
+        rel="stylesheet"
+        href="assets/css/builders.css"
+    >
+
+    <link
+        id="template-css"
+        rel="stylesheet"
+        href=""
+    >
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
+
+    <header class="builder-header">
+
+        <div>
+            <p class="eyebrow">RESUMEFORGE</p>
+
+            <h1>Build your resume</h1>
+
+            <p class="builder-subtitle">
+                Create a clean, professional resume in minutes.
+            </p>
+        </div>
+
+        <div class="template-status">
+            Template:
+            <strong id="template-name">
+                none
+            </strong>
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         BUILDER FORM
+    ====================================================== -->
+
+    <main class="builder-container">
+
+        <form
+            id="resumeForm"
+            onsubmit="generateResume(event)"
+        >
+
+
+            <!-- =================================================
+                 PROFILE
+            ================================================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        01
+                    </span>
+
+                    <div>
+                        <h2>Profile</h2>
+
+                        <p>
+                            Introduce yourself in 2–3 concise lines.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group full">
+
+                        <label for="summary">
+                            Professional Summary
+                        </label>
+
+                        <textarea
+                            id="summary"
+                            name="summary"
+                            rows="5"
+                            maxlength="500"
+                            placeholder="Example: Computer Science graduate with a strong foundation in C++, DSA and frontend development..."
+                        ></textarea>
+
+                        <span class="field-help">
+                            Keep it concise and focused on your strengths.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 CONTACT
+            ================================================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <div>
+                        <h2>Contact Information</h2>
+
+                        <p>
+                            Add the details recruiters can use to reach you.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="contact-name">
+                            Full Name
+                        </label>
+
+                        <input
+                            id="contact-name"
+                            type="text"
+                            class="contact-name"
+                            placeholder="Mir Ahmed Ali"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="contact-email">
+                            Email
+                        </label>
+
+                        <input
+                            id="contact-email"
+                            type="email"
+                            class="contact-email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="contact-phone">
+                            Phone
+                        </label>
+
+                        <input
+                            id="contact-phone"
+                            type="tel"
+                            class="contact-phone"
+                            placeholder="+91 XXXXX XXXXX"
+                            autocomplete="tel"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="contact-address">
+                            Location
+                        </label>
+
+                        <input
+                            id="contact-address"
+                            type="text"
+                            class="contact-address"
+                            placeholder="Hyderabad, Telangana"
+                        >
+
+                        <span class="field-help">
+                            City and state are enough. Avoid your full home address.
+                        </span>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="contact-linkedin">
+                            LinkedIn
+                        </label>
+
+                        <input
+                            id="contact-linkedin"
+                            type="url"
+                            class="contact-linkedin"
+                            placeholder="https://linkedin.com/in/yourname"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="contact-github">
+                            GitHub
+                        </label>
+
+                        <input
+                            id="contact-github"
+                            type="url"
+                            class="contact-github"
+                            placeholder="https://github.com/yourname"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label for="contact-portfolio">
+                            Portfolio / Website
+                        </label>
+
+                        <input
+                            id="contact-portfolio"
+                            type="url"
+                            class="contact-portfolio"
+                            placeholder="https://yourwebsite.com"
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 EDUCATION
+            ================================================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        03
+                    </span>
+
+                    <div>
+                        <h2>Education</h2>
+
+                        <p>
+                            Add your academic background.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div id="education-container">
+
+                    <div class="education-entry form-card">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label>Degree</label>
+
+                                <input
+                                    type="text"
+                                    placeholder="B.E. Computer Science & Data Science"
+                                    class="degree"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Institution</label>
+
+                                <input
+                                    type="text"
+                                    placeholder="University / College"
+                                    class="school"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Year</label>
+
+                                <input
+                                    type="text"
+                                    placeholder="2022 – 2026"
+                                    class="year"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Grade / Percentage</label>
+
+                                <input
+                                    type="text"
+                                    placeholder="8.9 CGPA"
+                                    class="grade"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="add-education"
+                    class="add-button"
+                >
+                    + Add Education
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 EXPERIENCE
+            ================================================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        04
+                    </span>
+
+                    <div>
+                        <h2>Experience</h2>
+
+                        <p>
+                            Add internships, jobs or relevant professional experience.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div id="experience-container">
+
+                    <div class="experience-entry form-card">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label>Job / Role</label>
+
+                                <input
+                                    type="text"
+                                    placeholder="Frontend Developer Intern"
+                                    class="job-title"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Company / Organization</label>
+
+                                <input
+                                    type="text"
+                                    placeholder="Company Name"
+                                    class="company"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group full">
+
+                                <label>Duration</label>
+
+                                <input
+                                    type="text"
+                                    placeholder="June 2026 – August 2026"
+                                    class="duration"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group full">
+
+                                <label>Responsibilities</label>
+
+                                <textarea
+                                    class="responsibilities"
+                                    rows="4"
+                                    placeholder="Describe what you built, improved or contributed..."
+                                ></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="add-experience"
+                    class="add-button"
+                >
+                    + Add Experience
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 PROJECTS
+            ================================================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        05
+                    </span>
+
+                    <div>
+                        <h2>Projects</h2>
+
+                        <p>
+                            Showcase projects that demonstrate your skills.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div id="projects-container">
+
+                    <div class="project-entry form-card">
+
+                        <div class="form-grid">
+
+                            <div class="form-group full">
+
+                                <label>Project Title</label>
+
+                                <input
+                                    type="text"
+                                    placeholder="ResumeForge — Resume Builder"
+                                    class="project-title"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group full">
+
+                                <label>Technologies</label>
+
+                                <input
+                                    type="text"
+                                    placeholder="HTML, CSS, JavaScript"
+                                    class="technologies"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group full">
+
+                                <label>Project Description</label>
+
+                                <textarea
+                                    class="project-description"
+                                    rows="4"
+                                    placeholder="Explain what the project does and what problem it solves..."
+                                ></textarea>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Your Role / Contribution</label>
+
+                                <input
+                                    type="text"
+                                    placeholder="Frontend Developer"
+                                    class="role"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Project Link</label>
+
+                                <input
+                                    type="url"
+                                    placeholder="https://..."
+                                    class="project-link"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="add-project"
+                    class="add-button"
+                >
+                    + Add Project
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 TECHNICAL SKILLS
+            ================================================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        06
+                    </span>
+
+                    <div>
+                        <h2>Technical Skills</h2>
+
+                        <p>
+                            List skills relevant to the role you're applying for.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>Programming Languages</label>
+
+                        <input
+                            type="text"
+                            id="programming-skills"
+                            class="programming-skills"
+                            placeholder="C++, C, Python"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Web Development</label>
+
+                        <input
+                            type="text"
+                            id="web-skills"
+                            class="web-skills"
+                            placeholder="HTML, CSS, JavaScript"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Database</label>
+
+                        <input
+                            type="text"
+                            id="database-skills"
+                            class="database-skills"
+                            placeholder="SQL"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Core Concepts</label>
+
+                        <input
+                            type="text"
+                            id="core-skills"
+                            class="core-skills"
+                            placeholder="DSA, OOP"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>Tools / Technologies</label>
+
+                        <input
+                            type="text"
+                            id="tools-skills"
+                            class="tools-skills"
+                            placeholder="Git, GitHub, VS Code"
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 ACHIEVEMENTS
+            ================================================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        07
+                    </span>
+
+                    <div>
+                        <h2>Achievements</h2>
+
+                        <p>
+                            Add awards, competition wins and notable accomplishments.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div id="achievements-container">
+
+                    <input
+                        type="text"
+                        placeholder="1st Place — College Web Development Expo"
+                        class="achievement"
+                    >
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="add-achievement"
+                    class="add-button"
+                >
+                    + Add Achievement
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 CERTIFICATIONS
+            ================================================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        08
+                    </span>
+
+                    <div>
+                        <h2>Certifications</h2>
+
+                        <p>
+                            Add relevant certifications and training.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div id="certifications-container">
+
+                    <div class="cert-entry form-card">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label>Certificate Name</label>
+
+                                <input
+                                    type="text"
+                                    class="cert-name"
+                                    placeholder="Certificate Name"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Issued By</label>
+
+                                <input
+                                    type="text"
+                                    class="cert-issued-by"
+                                    placeholder="Organization"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Date</label>
+
+                                <input
+                                    type="text"
+                                    class="cert-date"
+                                    placeholder="2026"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Certificate Link</label>
+
+                                <input
+                                    type="url"
+                                    class="cert-link"
+                                    placeholder="https://..."
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="add-certification"
+                    class="add-button"
+                >
+                    + Add Certification
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 LANGUAGES
+            ================================================== -->
+
+            <section class="form-section optional-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        09
+                    </span>
+
+                    <div>
+                        <h2>Languages</h2>
+
+                        <p>
+                            Optional.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div id="languages-container">
+
+                    <div class="language-entry form-card">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label>Language</label>
+
+                                <input
+                                    type="text"
+                                    class="language"
+                                    placeholder="English"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Proficiency</label>
+
+                                <input
+                                    type="text"
+                                    class="language-proficiency"
+                                    placeholder="Professional"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="add-language"
+                    class="add-button"
+                >
+                    + Add Language
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 ADDITIONAL SECTIONS
+            ================================================== -->
+
+            <section class="form-section optional-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        10
+                    </span>
+
+                    <div>
+                        <h2>Additional Sections</h2>
+
+                        <p>
+                            Add publications, volunteering, coursework, interests or anything else relevant.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div id="custom-sections-container">
+
+                    <div class="custom-section-entry form-card">
+
+                        <div class="form-group">
+
+                            <label>Section Heading</label>
+
+                            <input
+                                type="text"
+                                class="custom-heading"
+                                placeholder="Coursework"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Content</label>
+
+                            <textarea
+                                class="custom-content"
+                                rows="4"
+                                placeholder="Add your content..."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="add-custom-section"
+                    class="add-button"
+                >
+                    + Add Additional Section
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 REFERENCES
+            ================================================== -->
+
+            <section class="form-section optional-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        11
+                    </span>
+
+                    <div>
+                        <h2>References</h2>
+
+                        <p>
+                            Optional. Add only when requested by an employer.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div id="references-container">
+
+                    <div class="reference-entry form-card">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label>Name</label>
+
+                                <input
+                                    type="text"
+                                    class="ref-name"
+                                    placeholder="Reference Name"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Designation</label>
+
+                                <input
+                                    type="text"
+                                    class="ref-designation"
+                                    placeholder="Professor / Manager"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Organization</label>
+
+                                <input
+                                    type="text"
+                                    class="ref-organization"
+                                    placeholder="Organization"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Email</label>
+
+                                <input
+                                    type="email"
+                                    class="ref-email"
+                                    placeholder="reference@example.com"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Phone</label>
+
+                                <input
+                                    type="tel"
+                                    class="ref-phone"
+                                    placeholder="+91..."
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="add-reference"
+                    class="add-button"
+                >
+                    + Add Reference
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 GENERATE
+            ================================================== -->
+
+            <div class="form-actions">
+
+                <a
+                    href="template.html"
+                    class="back-button"
+                >
+                    ← Back to Templates
+                </a>
+
+
+                <button
+                    type="submit"
+                    class="generate-button"
+                >
+                    Generate Resume
+                    <span>→</span>
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </main>
+
+
+    <!-- =====================================================
+         SCRIPT
+    ====================================================== -->
+
+    <script src="assets/js/builderss.js"></script>
+
+
+    <script>
+
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
+
+        const template =
+            params.get("template") ||
+            "creative-minimalist";
+
+
+        const templateName =
+            document.getElementById(
+                "template-name"
+            );
+
+
+        if (templateName) {
+            templateName.textContent =
+                template;
+        }
+
+
+        localStorage.setItem(
+            "resumeTemplate",
+            template
+        );
+
+    </script>
+
+</body>
+
+</html>

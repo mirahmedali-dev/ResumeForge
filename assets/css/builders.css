@@ -1,0 +1,519 @@
+/* =========================================================
+   ResumeForge — Spacious Modern Builder
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 45px 20px 70px;
+
+    font-family: 'Inter', sans-serif;
+
+    background: #eef2f7;
+    color: #182033;
+
+    line-height: 1.5;
+}
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+body > p {
+    width: min(960px, 100%);
+    margin: 0 auto 8px;
+
+    font-size: 12px;
+    color: #7b8495;
+}
+
+body > p strong {
+    color: #4f5bd5;
+    font-weight: 600;
+}
+
+body > h1 {
+    width: min(960px, 100%);
+    margin: 0 auto 30px;
+
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+
+    color: #111827;
+}
+
+/* =========================================================
+   MAIN FORM
+   ========================================================= */
+
+#resumeForm {
+    width: min(960px, 100%);
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    padding: 46px 58px 50px;
+
+    border: 1px solid #e4e8ef;
+    border-radius: 18px;
+
+    box-shadow:
+        0 12px 35px rgba(25, 35, 55, 0.08);
+}
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+#resumeForm > h2 {
+    position: relative;
+
+    margin: 52px 0 8px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: #171d2b;
+
+    letter-spacing: -0.2px;
+}
+
+#resumeForm > h2:first-of-type {
+    margin-top: 0;
+}
+
+#resumeForm > h2::before {
+    content: '';
+
+    display: inline-block;
+
+    width: 4px;
+    height: 17px;
+
+    margin-right: 9px;
+
+    vertical-align: -2px;
+
+    border-radius: 5px;
+
+    background: #5663dc;
+}
+
+/* Description under section heading */
+
+#resumeForm > h2 + p,
+.section-description {
+    margin: 0 0 20px;
+
+    font-size: 12px;
+    color: #8a93a3;
+}
+
+/* =========================================================
+   FORM GROUPS / CONTAINERS
+   ========================================================= */
+
+.section,
+.about-me-section,
+#education-container,
+#experience-container,
+#projects-container,
+#certifications-container,
+#achievements-container,
+#languages-container,
+#references-container,
+#custom-sections-container {
+    width: 100%;
+}
+
+/* =========================================================
+   INDIVIDUAL ENTRY CARDS
+   ========================================================= */
+
+.education-entry,
+.experience-entry,
+.project-entry,
+.cert-entry,
+.language-entry,
+.reference-entry,
+.custom-section-entry {
+    position: relative;
+
+    margin-bottom: 22px;
+    padding: 24px 24px 22px;
+
+    background: #fafbfc;
+
+    border: 1px solid #e4e8ef;
+    border-radius: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.education-entry:hover,
+.experience-entry:hover,
+.project-entry:hover,
+.cert-entry:hover,
+.language-entry:hover,
+.reference-entry:hover,
+.custom-section-entry:hover {
+    border-color: #cfd5e1;
+
+    box-shadow:
+        0 5px 16px rgba(30, 40, 60, 0.05);
+}
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+#resumeForm label {
+    display: block;
+
+    margin: 0 0 7px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #343b4b;
+}
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+
+    color: #202635;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe3ea;
+    border-radius: 8px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+input {
+    min-height: 43px;
+    padding: 11px 13px;
+
+    margin-bottom: 15px;
+}
+
+textarea {
+    min-height: 105px;
+    padding: 12px 13px;
+
+    resize: vertical;
+
+    line-height: 1.55;
+
+    margin-bottom: 15px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #a7afbc;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #6672df;
+
+    box-shadow:
+        0 0 0 3px rgba(86, 99, 220, 0.10);
+
+    background: #fff;
+}
+
+/* =========================================================
+   PROFILE / ABOUT ME
+   ========================================================= */
+
+.about-me-section {
+    padding: 0;
+}
+
+#summary {
+    min-height: 135px;
+}
+
+/* =========================================================
+   CONTACT SECTION
+   ========================================================= */
+
+#contact-container {
+    padding: 24px;
+
+    background: #fafbfc;
+
+    border: 1px solid #e4e8ef;
+    border-radius: 12px;
+}
+
+/* =========================================================
+   EDUCATION
+   ========================================================= */
+
+.education-entry input:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
+
+.experience-entry textarea {
+    min-height: 125px;
+}
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+
+.project-entry textarea {
+    min-height: 125px;
+}
+
+/* =========================================================
+   ACHIEVEMENTS
+   ========================================================= */
+
+#achievements-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#achievements-container input {
+    margin-bottom: 10px;
+}
+
+/* =========================================================
+   ADD BUTTONS
+   ========================================================= */
+
+button[type="button"] {
+    width: 100%;
+
+    min-height: 42px;
+
+    margin-top: 2px;
+    margin-bottom: 10px;
+
+    padding: 10px 16px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #5965d9;
+    color: #ffffff;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+}
+
+button[type="button"]:hover {
+    background: #4855cf;
+
+    box-shadow:
+        0 5px 12px rgba(79, 91, 213, 0.20);
+}
+
+button[type="button"]:active {
+    transform: translateY(1px);
+}
+
+/* =========================================================
+   GENERATE RESUME BUTTON
+   ========================================================= */
+
+button[type="submit"] {
+    display: block;
+
+    width: 100%;
+
+    min-height: 50px;
+
+    margin-top: 38px;
+    padding: 13px 20px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #202938;
+    color: #ffffff;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background: #111827;
+
+    box-shadow:
+        0 8px 20px rgba(20, 28, 40, 0.18);
+}
+
+button[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+/* =========================================================
+   BACK LINK
+   ========================================================= */
+
+.back {
+    width: min(960px, 100%);
+    margin: 22px auto 0;
+}
+
+.back .inner {
+    display: flex;
+    align-items: center;
+}
+
+.back a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 8px 12px;
+
+    text-decoration: none;
+
+    color: #667085;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    border-radius: 7px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.back a:hover {
+    color: #394150;
+    background: #e4e8ef;
+}
+
+.back img {
+    width: 15px;
+    height: 15px;
+}
+
+/* =========================================================
+   OPTIONAL SECTION SPACING
+   ========================================================= */
+
+#custom-sections-container,
+#references-container,
+#languages-container {
+    margin-bottom: 4px;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 25px 12px 45px;
+    }
+
+    body > h1 {
+        font-size: 25px;
+        margin-bottom: 22px;
+    }
+
+    #resumeForm {
+        padding: 30px 20px 35px;
+        border-radius: 14px;
+    }
+
+    #resumeForm > h2 {
+        margin-top: 42px;
+        font-size: 15px;
+    }
+
+    .education-entry,
+    .experience-entry,
+    .project-entry,
+    .cert-entry,
+    .language-entry,
+    .reference-entry,
+    .custom-section-entry,
+    #contact-container {
+        padding: 19px 17px;
+    }
+
+    input {
+        min-height: 44px;
+    }
+
+    textarea {
+        min-height: 110px;
+    }
+}
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    #resumeForm {
+        padding: 25px 15px 30px;
+    }
+
+    .education-entry,
+    .experience-entry,
+    .project-entry,
+    .cert-entry,
+    .language-entry,
+    .reference-entry,
+    .custom-section-entry,
+    #contact-container {
+        padding: 17px 14px;
+    }
+}
